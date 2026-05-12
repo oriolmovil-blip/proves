@@ -53,8 +53,8 @@ def crear_bd():
 
 # Cargar datos
 conn = sqlite3.connect("datos.db")#tu_base.db
-cursor = conn.execute("SELECT codigo FROM articulos")#("SELECT nombre FROM tabla")
-filas = cursor.fetchall()
+#cursor = conn.execute("SELECT codigo FROM articulos")#("SELECT nombre FROM tabla")
+#filas = cursor.fetchall()
 
 items = [row[0] for row in conn.execute("SELECT codigo FROM articulos").fetchall()]
 
@@ -67,7 +67,8 @@ items = [row[0] for row in conn.execute("SELECT codigo FROM articulos").fetchall
 #print(items)
 #print(filas)
 
-# Mostrar botones
+ #Mostrar botones
+
 #for fila in filas:
 #    if st.button(fila[0]):
 #        st.write(f"Pulsaste: {fila[0]}")
